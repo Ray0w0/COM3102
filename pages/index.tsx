@@ -1,14 +1,11 @@
+import React from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div>
       <h1>Demo</h1>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
+      <Container>
         <a href="demo/demo1" className={styles.card}>
           Example 1 : Add a new page
         </a>
@@ -24,12 +21,8 @@ export default function Home() {
         <a href="demo/demo5" className={styles.card}>
           Example 5 : Passing properties - cont
         </a>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
+      </Container>
+      <Container>
         <a href="demo/demo6" className={styles.card}>
           Example 6 : State
         </a>
@@ -45,12 +38,8 @@ export default function Home() {
         <a href="demo/demo10" className={styles.card}>
           Example 10 : Shopping cart
         </a>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
+      </Container>
+      <Container>
         <a href="demo/demo11" className={styles.card}>
           Example 11 : CSS in React
         </a>
@@ -66,12 +55,8 @@ export default function Home() {
         <a href="demo/demo15" className={styles.card}>
           Example 15 : useMemo
         </a>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
+      </Container>
+      <Container>
         <a href="demo/demo16" className={styles.card}>
           Example 16 : Dependencies in useMemo
         </a>
@@ -84,35 +69,9 @@ export default function Home() {
         <a href="demo/demo19" className={styles.card}>
           Example 19 : Never miss a hook function
         </a>
-      </div>
-      <h1>Storage</h1>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <a href="store/demo1" className={styles.card}>
-          Example 1 : Local storage
-        </a>
-        <a href="store/demo2" className={styles.card}>
-          Example 2 : Session storage
-        </a>
-        <a href="store/demo3" className={styles.card}>
-          Example 3 : Cookie
-        </a>
-        <a href="store/demo4" className={styles.card}>
-          Example 4 : Cookie (2)
-        </a>
-        <a href="store/demo5" className={styles.card}>
-          Example 5 : JSON
-        </a>
-      </div>
+      </Container>
       <h1>Exercise</h1>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
+      <Container>
         <a href="exercise/ex1" className={styles.card}>
           Exercise 1 : Guess my number
         </a>
@@ -128,16 +87,54 @@ export default function Home() {
         <a href="exercise/ex5" className={styles.card}>
           Exercise 5 : Filterable combo box
         </a>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
+      </Container>
+      <Container>
         <a href="exercise/ex6" className={styles.card}>
           Exercise 6 : Field component
         </a>
-      </div>
+      </Container>
+      <h1>Storage</h1>
+      <Container>
+        <a href="store/demo1" className={styles.card}>
+          Example 1 : Local storage
+        </a>
+        <a href="store/demo2" className={styles.card}>
+          Example 2 : Session storage
+        </a>
+        <a href="store/demo3" className={styles.card}>
+          Example 3 : Cookie
+        </a>
+        <a href="store/demo4" className={styles.card}>
+          Example 4 : Cookie (2)
+        </a>
+        <a href="store/demo5" className={styles.card}>
+          Example 5 : JSON
+        </a>
+      </Container>
+      <h1>Storage Exercise</h1>
+      <Container>
+        <a href="storeex/ex1" className={styles.card}>
+          Exercise 1 : Local storage
+        </a>
+        <a href="storeex/ex2" className={styles.card}>
+          Exercise 2 : Session storage
+        </a>
+        <a href="storeex/ex3" className={styles.card}>
+          Exercise 3 : JSON
+        </a>
+      </Container>
     </div>
   );
 }
+
+const Container: React.FC<{children: React.ReactNode}> = function ({children}) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
+      {children}
+    </div>
+  );
+};
