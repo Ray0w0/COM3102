@@ -1,9 +1,12 @@
+import {Button} from '@blueprintjs/core';
 import React from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div>
+      <Button active={true} icon="archive" />
+
       <h1>Demo</h1>
       <Container>
         <a href="demo/demo1" className={styles.card}>
@@ -122,6 +125,12 @@ export default function Home() {
         <a href="storeex/ex3" className={styles.card}>
           Exercise 3 : JSON
         </a>
+      </Container>
+      <h1>Assignment 3</h1>
+      <Container>
+        <a href="assignment/" className={styles.card}>
+          Assignment 3 : Shopping cart
+        </a>        
       </Container>
     </div>
   );
